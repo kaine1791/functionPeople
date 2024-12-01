@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_NAME 20
+#define DAY 8.32
+#define NIGHT 9.15
+
+typedef struct {
+        char name[MAX_NAME];
+        int tip;
+        int dayHour;
+        int nightHour;
+    
+} tVigilant;
+
+int main()
+{
+    tVigilant vigilant;
+    float dayPayment, nightPayment, payment;
+    
+    
+    
+    
+    
+    printf("Introduzca horas diurnas: ");
+    scanf("%d",&vigilant.dayHour);
+    printf("Introduzca horas nocturnas: ");
+    scanf("%d",&vigilant.nightHour);
+    
+    dayPayment = vigilant.dayHour * DAY;
+    nightPayment = vigilant.nightHour * NIGHT;
+    
+    payment = dayPayment + nightPayment;
+    
+    printf("Pago: %.2f\n",payment);
+
+    return 0;
+}
